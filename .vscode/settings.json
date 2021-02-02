@@ -1,5 +1,6 @@
 {
   "python.condaPath": "/home/darkeye/miniconda3/condabin/conda",
   "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.linting.pylintEnabled": true
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "black"
 }
