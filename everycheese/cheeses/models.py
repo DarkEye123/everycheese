@@ -6,7 +6,7 @@ from autoslug import AutoSlugField
 
 class Cheese(TimeStampedModel):
     def __str__(self) -> str:
-        return "%s %s %s" % (self.name, self.slug, self.firmness)
+        return "%s %s %s %s" % (self.name, self.description, self.firmness, self.slug)
 
     class Firmness(models.TextChoices):
         UNSPECIFIED = "unspecified", "Unspecified"
