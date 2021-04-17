@@ -2,6 +2,13 @@
 
 {% block title %}Cheese List{% endblock title %}
 
+{% comment %} In this template, we display all the cheeses in a bulleted list.
+We iterate over cheese_list , which CheeseListView automatically
+provides to the template. This is a built-in copy of the default
+object_list value that ListView provides by default. If our model
+was Butter instead of Cheese , then we would access butter_list
+instead. {% endcomment %}
+
 {% block content %}
 <h2>Cheese List</h2>
 <ul>
