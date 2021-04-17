@@ -22,4 +22,10 @@ instantiated model is available. {% endcomment %}
   <p>{{ cheese.description }}</p>
 {% endif %}
 
+{% if cheese.country %}
+  <h3>Country: {{ cheese.get_country_display }} <img src="{{cheese.country.flag}}"></h3>
+{% else %}
+  <h3>Country: undetected</h3>
+{% endif %}
+
 {% endblock content %}

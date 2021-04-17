@@ -2,6 +2,7 @@ from django.db import models
 
 from model_utils.models import TimeStampedModel
 from autoslug import AutoSlugField
+from django_countries.fields import CountryField
 
 
 class Cheese(TimeStampedModel):
@@ -25,4 +26,7 @@ class Cheese(TimeStampedModel):
         max_length=20,
         default=Firmness.UNSPECIFIED,
         choices=Firmness.choices,
+    )
+    country = CountryField(
+        "Country of origin", blank_label="select country", blank=True
     )
