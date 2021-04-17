@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Detail of {{cheese.name}}{% endblock title %}
+
+{% block content %}
+
+<h2>{{cheese.name}}</h2>
+
+{% comment %} the cheese’s firmness attribute
+in an attractive format. get_FOO_display() is a utility
+method created automatically for any Django model
+field. So where we had a firmness choice field defined on
+our Cheese model, Django adds a get_firmness_display()
+method which we can call in templates or any place the
+instantiated model is available. {% endcomment %}
+
+{% if cheese.firmness %}
+  <p>Firmness: {{cheese.get_firmness_display}}</p>
+{% endif %}
+
+{% if cheese.description %}
+  <p>{{ cheese.description }}</p>
+{% endif %}
+
+{% endblock content %}

@@ -1,8 +1,7 @@
 import pytest
+from ..models import Cheese
 
 pytestmark = pytest.mark.django_db
-
-from ..models import Cheese
 
 
 def test__str__():
