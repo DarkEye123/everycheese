@@ -16,4 +16,11 @@ instead. {% endcomment %}
   <li><a href="{% url 'cheeses:detail' cheese.slug %}">{{ cheese.name }}</a></li>
   {% endfor %}
 </ul>
+
+<hr />
+
+<p>don't you see any cheese?</p>
+<p>
+  <a href="{% url 'cheeses:add' %}" role="button" class="btn btn-primary">Add Cheese</a>
+</p>
 {% endblock content %}
