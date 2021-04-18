@@ -84,6 +84,7 @@ THIRD_PARTY_APPS = [
     "django_countries",
 ]
 
+
 LOCAL_APPS = [
     "everycheese.users.apps.UsersConfig",
     "everycheese.cheeses.apps.CheesesConfig"
