@@ -28,4 +28,10 @@ instantiated model is available. {% endcomment %}
   <h3>Country: undetected</h3>
 {% endif %}
 
+{% if cheese.creator %}
+  <p>Author: {{ cheese.creator }}
+{% else %}
+  <p>Author: unknown
+{% endif %}
+
 {% endblock content %}
