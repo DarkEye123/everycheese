@@ -28,8 +28,15 @@ instantiated model is available. {% endcomment %}
   <h3>Country: undetected</h3>
 {% endif %}
 
+<hr/>
+
+
 {% if cheese.creator %}
-  <p>Author: {{ cheese.creator }}
+<h3>Submitted by
+  <a href="{% url 'users:detail' cheese.creator.username %}">
+  {{ cheese.creator.name }}
+  </a>
+</h3>
 {% else %}
   <p>Author: unknown
 {% endif %}
